@@ -1,0 +1,14 @@
+{
+	"fmt": {
+    "files": {
+      "exclude": [
+        "deno.jsonc",
+        "deno.lock"
+      ]
+    }
+  },
+  "tasks": {
+    "dev": "deno run --watch main.ts",
+    "start": "deno run --allow-net main.ts"
+  }
+}
