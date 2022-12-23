@@ -1,34 +1,25 @@
-import { Composer, Context, InlineKeyboard } from "../deps.ts";
+import { Composer, Context, InlineKeyboard, Keyboard } from "../deps.ts";
 
 const composer = new Composer();
 
-export const message1 = (ctx: Context): string =>
-  `<b>Привет, ${ctx?.from?.first_name}!</b> \n` +
+export const message = (ctx: Context): string =>
+  `<b>Привет ${ctx?.from?.first_name}, с Наступающим новым годом!!</b> ` +
   `\n` +
-  `С наступающим Новым годом!`;
-
-export const message2 =
-  `Я — Инно, волшебник с эмпатией. Я дарю людям только то, что им по-настоящему нужно прямо сейчас 😌 \n` +
-  `\n` +
-  `Хочешь получить свой подарок? Ответь на несколько вопросов!`;
+  `Узнай, что ждет тебя в 2023 году.`;
 
 export const keyboard = new Keyboard()
-  .url("Jamiyat", "https://t.me/xinuxuz")
-  .url("Web Sahifa", "https://xinux.uz");
+  .oneTime()
+  .text("Да, это моя стихия")
 
 composer.command("start", async (ctx: Context): Promise<void> => {
-  if (ctx.message!.is_topic_message) {
-    await ctx.reply(message, {
-      message_thread_id: ctx.message!.message_thread_id,
-      parse_mode: "HTML",
-      reply_markup: keyboard,
-    });
-  } else {
-    await ctx.reply(message, {
-      parse_mode: "HTML",
-      reply_markup: keyboard,
-    });
-  }
+  await ctx.reply(message(ctx), {
+    parse_mode: "HTML",
+  });
+
+  await ctx.reply("Работаешь ли ты в IT сфере?", {
+    parse_mode: "HTML",
+    reply_markup: keyboard
+  })
 });
 
 export default composer;
