@@ -43,7 +43,7 @@ const webhook = async () => {
           return new Response("Couldn't succeed with installing webhook");
         }
       default:
-        return Response.redirect("https://t.me/xeonittebot", 302);
+        return Response.redirect("https://t.me/infokomets_bot", 302);
     }
   });
 };
