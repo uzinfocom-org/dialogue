@@ -9,7 +9,7 @@ export const message = (ctx: Context): string =>
 export const keyboard = new Keyboard()
   .oneTime()
   .text("Да, это моя стихия")
-  .text("Нет, IT не мое");
+  .text("Нет, Айти не мое");
 
 composer.callbackQuery("retry", async (ctx: Context) => {
   await ctx.reply(message(ctx), {

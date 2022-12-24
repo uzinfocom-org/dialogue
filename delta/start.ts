@@ -10,7 +10,7 @@ export const message = (ctx: Context): string =>
 export const keyboard = new Keyboard()
   .oneTime()
   .text("Да, это моя стихия")
-  .text("Нет, IT не мое");
+  .text("Нет, Айти не мое");
 
 composer.command("start", async (ctx: Context): Promise<void> => {
   await ctx.reply(message(ctx), {
