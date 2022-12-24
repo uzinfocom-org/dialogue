@@ -14,7 +14,7 @@ const hook: Hook = {
         .oneTime()
         .text("Да, это моя стихия")
         .row()
-        .text("Нет, IT не мое"),
+        .text("Нет, Айти не мое"),
     });
   },
 
