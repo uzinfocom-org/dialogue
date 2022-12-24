@@ -13,14 +13,14 @@ export const keyboard = new InlineKeyboard()
   .url(`UwUssimo (Программист)`, `https://t.me/uwublog`)
   .row()
   .url(`𝐑𝐨𝐜𝐤𝐞𝐭✧ (Создатель Диалога)`, `https://t.me/stacyxan`)
-  //.row()
-  //.url(`Dilfuza (Дизайнер)`, `https://t.me/i_dilfuz`)
   .row()
+  // Work hard in order to play hard...
+  //.url(`Dilfuza (Дизайнер)`, `https://t.me/i_dilfuz`)
+  // .row()
   .url(
     `Исходный Код (GitHub)`,
     `https://github.com/uzinfocom-org/dialogue`,
-  )
-  .row();
+  );
 
 composer.command("about", isPrivate, async (ctx: Context): Promise<void> => {
   await ctx.reply(message, {
