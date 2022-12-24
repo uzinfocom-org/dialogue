@@ -13,8 +13,8 @@ export const keyboard = new InlineKeyboard()
   .url(`UwUssimo (Программист)`, `https://t.me/uwublog`)
   .row()
   .url(`𝐑𝐨𝐜𝐤𝐞𝐭✧ (Создатель Диалога)`, `https://t.me/stacyxan`)
-  .row()
-  .url(`Dilfuza (Дизайнер)`, `https://t.me/i_dilfuz`)
+  //.row()
+  //.url(`Dilfuza (Дизайнер)`, `https://t.me/i_dilfuz`)
   .row()
   .url(
     `Исходный Код (GitHub)`,
