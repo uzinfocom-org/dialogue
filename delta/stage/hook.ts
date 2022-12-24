@@ -13,7 +13,7 @@ const hook: Hook = {
       reply_markup: new Keyboard()
         .oneTime()
         .text("Да, это моя стихия")
-          .row()
+        .row()
         .text("Нет, IT не мое"),
     });
   },
@@ -23,7 +23,7 @@ const hook: Hook = {
     await ctx.reply(`Отлично, а что напрягает в работе?`, {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
-          .oneTime()
+        .oneTime()
         .text("Короткие дедлайны")
         .row()
         .text("Баги в коде")
@@ -37,9 +37,9 @@ const hook: Hook = {
     await ctx.reply(`Что хуже: когда ошибаешься ты или кто-то другой?`, {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
-          .oneTime()
+        .oneTime()
         .text('Я "ты"')
-          .row()
+        .row()
         .text("Кто-то другой"),
     });
   },
@@ -73,7 +73,7 @@ const hook: Hook = {
     await ctx.reply(`Понимаю, короткие сроки. А как решаешь проблему?`, {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
-          .oneTime()
+        .oneTime()
         .text(`Договариваюсь с поставщиком`)
         .row()
         .text(`Работаю без выходных`)
@@ -127,9 +127,9 @@ const hook: Hook = {
   "Множество правок": async (ctx: Context) => {
     await ctx.reply(`А что делаешь, когда правок слишком много?`, {
       reply_markup: new Keyboard()
-          .oneTime()
+        .oneTime()
         .text("Оспариваю каждую!")
-          .row()
+        .row()
         .text("Вношу, что поделать"),
     });
   },
@@ -164,7 +164,7 @@ const hook: Hook = {
     await ctx.reply(`Как в целом прошел рабочий год?`, {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
-          .oneTime()
+        .oneTime()
         .text("Трудно, но интересно")
         .row()
         .text("В целом неплохо")
