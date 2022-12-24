@@ -3,7 +3,7 @@ import { reply } from "../utils/sender.ts";
 
 const keyboard = new InlineKeyboard().url(
   `Перейти`,
-  `https://t.me/uwuchanbot`,
+  `https://t.me/infokomets_bot`,
 );
 
 export default async (ctx: Context, next: NextFunction) => {
