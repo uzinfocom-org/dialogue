@@ -1,3 +1,4 @@
+// deno-lint-ignore-file no-explicit-any
 import { blue, Bot, serve, webhookCallback } from "./deps.ts";
 import "./utils/config.ts";
 import env from "./utils/config.ts";

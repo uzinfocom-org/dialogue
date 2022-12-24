@@ -2,7 +2,7 @@ import { Context, InlineKeyboard, NextFunction } from "../deps.ts";
 import { reply } from "../utils/sender.ts";
 
 const keyboard = new InlineKeyboard().url(
-  `Shaxsiy Chat`,
+  `Перейти`,
   `https://t.me/uwuchanbot`,
 );
 
@@ -10,7 +10,7 @@ export default async (ctx: Context, next: NextFunction) => {
   if (ctx.chat!.type !== "private") {
     return await reply(
       ctx,
-      `⚠️ Bu komanda faqat shaxsiy chat uchun!`,
+      `⚠️ Этот бот предназначен только для приватного чата!`,
       keyboard,
     );
   }

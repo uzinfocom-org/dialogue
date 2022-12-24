@@ -4,8 +4,8 @@ export {
   Context,
   InlineKeyboard,
   InputFile,
+  Keyboard,
   webhookCallback,
-  Keyboard
 } from "https://deno.land/x/grammy@v1.12.0/mod.ts";
 export { serve } from "https://deno.land/std@0.163.0/http/server.ts";
 export type { NextFunction } from "https://deno.land/x/grammy@v1.12.0/mod.ts";

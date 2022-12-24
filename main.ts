@@ -1,1 +1,1 @@
-import "./core.ts"
+import "./core.ts";

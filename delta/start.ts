@@ -1,4 +1,4 @@
-import { Composer, Context, InlineKeyboard, Keyboard } from "../deps.ts";
+import { Composer, Context, Keyboard } from "../deps.ts";
 
 const composer = new Composer();
 
@@ -10,6 +10,7 @@ export const message = (ctx: Context): string =>
 export const keyboard = new Keyboard()
   .oneTime()
   .text("Да, это моя стихия")
+  .text("Нет, IT не мое");
 
 composer.command("start", async (ctx: Context): Promise<void> => {
   await ctx.reply(message(ctx), {
@@ -18,8 +19,8 @@ composer.command("start", async (ctx: Context): Promise<void> => {
 
   await ctx.reply("Работаешь ли ты в IT сфере?", {
     parse_mode: "HTML",
-    reply_markup: keyboard
-  })
+    reply_markup: keyboard,
+  });
 });
 
 export default composer;
