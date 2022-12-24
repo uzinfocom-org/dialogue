@@ -17,7 +17,7 @@ export const keyboard = new InlineKeyboard()
   .url(`... (Дизайнер)`, `https://t.me/uzinfocomofficial`)
   .row()
   .url(
-    `Исходный Код`,
+    `Исходный Код (GitHub)`,
     `https://github.com/uzinfocom-org/dialogue`,
   )
   .row();
