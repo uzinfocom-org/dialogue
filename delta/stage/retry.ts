@@ -1,4 +1,4 @@
-import * as dict from "./dict.ts"
+import * as dict from "./dict.ts";
 import { Composer, Context, Keyboard } from "../../deps.ts";
 
 const composer = new Composer();

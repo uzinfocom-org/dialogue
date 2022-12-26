@@ -1,4 +1,4 @@
-import * as dict from "./dict.ts"
+import * as dict from "./dict.ts";
 import { Context, Keyboard } from "../../deps.ts";
 
 type Hook = { [key: string]: (ctx: Context) => Promise<void> };
@@ -33,34 +33,22 @@ const hook: Hook = {
     });
   },
 
-  // Pointer 1, 2
-  [dict.pointer1.a2]: async (ctx: Context) => {
-    await ctx.reply(`Что хуже: когда ошибаешься ты или кто-то другой?`, {
-      parse_mode: "HTML",
-      reply_markup: new Keyboard()
-        .oneTime()
-        .text('Я "ты" 😔')
-        .row()
-        .text("Кто-то другой 🧐"),
-    });
-  },
-
   // Pointer 1, 1
   [dict.pointer1.a1]: async (ctx: Context) => {
-    await ctx.reply(`Понимаю, короткие сроки. А как решаешь проблему?`, {
+    await ctx.reply(dict.pointer11.q, {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
         .oneTime()
-        .text(`Договариваюсь с поставщиком 🤝`)
+        .text(dict.pointer11.a1)
         .row()
-        .text(`Работаю без выходных 😕`)
+        .text(dict.pointer11.a2)
         .row()
-        .text(`Грущу и не успеваю 😫`),
+        .text(dict.pointer11.a3),
     });
   },
 
   // Pointer 1, 1, 1 (Done!)
-  "Договариваюсь с поставщиком 🤝": async (ctx: Context) => {
+  [dict.pointer11.a1]: async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAO0Y6k4fCFHCZLpNRqmb7FCSOoY3qIAAtwlAAJxgzhJwaNgFVKk2KYsBA",
     );
@@ -79,7 +67,7 @@ const hook: Hook = {
   },
 
   // Pointer 1, 1, 2 (Done!)
-  "Работаю без выходных 😕": async (ctx: Context) => {
+  [dict.pointer11.a2]: async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAIBEmOpParLT1SX2xKye6xmfyIquS-mAAIcHwACKQNJSaTY-iJ5d7TeLAQ",
     );
@@ -96,7 +84,7 @@ const hook: Hook = {
   },
 
   // Pointer 1, 1, 3 (Done!)
-  "Грущу и не успеваю 😫": async (ctx: Context) => {
+  [dict.pointer11.a3]: async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAPRY6k6UubkW2WeDugI8dypJA9FdSMAAuglAAIrIzhJ90N8_vc6pW4sBA",
     );
@@ -112,16 +100,28 @@ const hook: Hook = {
     );
   },
 
+  // Pointer 1, 2
+  [dict.pointer1.a2]: async (ctx: Context) => {
+    await ctx.reply(dict.pointer12.q, {
+      parse_mode: "HTML",
+      reply_markup: new Keyboard()
+        .oneTime()
+        .text(dict.pointer12.a1)
+        .row()
+        .text(dict.pointer12.a2),
+    });
+  },
+
   // Pointer 1, 2, 1 (Done!)
-  'Я "ты" 😔': async (ctx: Context) => {
+  [dict.pointer12.a1]: async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAPUY6k6oCR_l-frSb_uZIByj2vcNpcAAlAmAALMCDlJ0kZVi7UqMm4sBA",
     );
 
     await ctx.reply(
       `Я вижу, что в 2023 ты справишься с тревожностью и ` +
-      `примешь, что все все мы не идеальны и имеем право ошибаться. ` +
-      `После этого работа пойдет легко и продуктивно! 🔥`,
+        `примешь, что все все мы не идеальны и имеем право ошибаться. ` +
+        `После этого работа пойдет легко и продуктивно! 🔥`,
       {
         reply_markup: retry,
       },
@@ -129,15 +129,15 @@ const hook: Hook = {
   },
 
   // Pointer 1, 2, 2 (Done!)
-  "Кто-то другой 🧐": async (ctx: Context) => {
+  [dict.pointer12.a2]: async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAPaY6k67M6c2hFUrkvCHufjv06FsN0AAn4mAAKR6jhJMNAS6lczB9YsBA",
     );
 
     await ctx.reply(
       `В 2023 тебя ждет долгая работа над ошибками...коллег. Но не ` +
-      `расстраивайся, это ненадолго! После того как вы поговорите и придете ` +
-      `к компромиссу, работа пойдет гораздо легче и продуктивнее.`,
+        `расстраивайся, это ненадолго! После того как вы поговорите и придете ` +
+        `к компромиссу, работа пойдет гораздо легче и продуктивнее.`,
       {
         reply_markup: retry,
       },
@@ -146,17 +146,17 @@ const hook: Hook = {
 
   // Pointer 1, 3
   [dict.pointer1.a3]: async (ctx: Context) => {
-    await ctx.reply(`А что делаешь, когда правок слишком много?`, {
+    await ctx.reply(dict.pointer13.q, {
       reply_markup: new Keyboard()
         .oneTime()
-        .text("Оспариваю каждую! 😠")
+        .text(dict.pointer13.a1)
         .row()
-        .text("Вношу, что поделать ✍️"),
+        .text(dict.pointer13.a2),
     });
   },
 
   // Pointer 1, 3, 1 (Done!)
-  "Оспариваю каждую! 💪": async (ctx: Context) => {
+  [dict.pointer13.a1]: async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAPdY6k7JGIZYEHKs-7Sgx4WMxsWL8wAAtwlAAJxgzhJwaNgFVKk2KYsBA",
     );
@@ -172,7 +172,7 @@ const hook: Hook = {
   },
 
   // Pointer 1, 3, 2 (Done!)
-  "Вношу, что поделать ✍️": async (ctx: Context) => {
+  [dict.pointer13.a2]: async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAPgY6k7ZEVmRHKLLixFu9jgLDrzdJsAAiAoAAKYgTlJsR4nEWjPRXEsBA",
     );
@@ -208,14 +208,14 @@ const hook: Hook = {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
         .oneTime()
-        .text("Больше интересных проектов 🤟🏻")
+        .text([dict.pointer21.a1])
         .row()
-        .text("Хочу отдохнуть 😴"),
+        .text([dict.pointer21.a2]),
     });
   },
 
   // Pointer 2, 1, 1 (Done!)
-  "Больше интересных проектов 🤟🏻": async (ctx: Context) => {
+  [dict.pointer21.a1]: async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAPjY6k7wRzmniC8BcJbBos3VZ9lIjwAAlAmAALMCDlJ0kZVi7UqMm4sBA",
     );
@@ -231,7 +231,7 @@ const hook: Hook = {
   },
 
   // Pointer 2, 1, 2 (Done!)
-  "Хочу отдохнуть 😴": async (ctx: Context) => {
+  [dict.pointer21.a2]: async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAPmY6k8BJuuHua2zYEZ9bWuXUepg-AAAuglAAIrIzhJ90N8_vc6pW4sBA",
     );
@@ -239,7 +239,7 @@ const hook: Hook = {
     await ctx.reply(
       `В 2023 году тебя ждут интересные проекты и много работы, однако ` +
         `ты не будешь забывать отдыхать и заботиться о себе, что плодотворно ` +
-        `скажется на реализации твоего потенциала. `,
+        `скажется на реализации твоего потенциала. ☺️`,
       {
         reply_markup: retry,
       },
@@ -248,22 +248,18 @@ const hook: Hook = {
 
   // Pointer 2, 2
   [dict.pointer2.a2]: async (ctx: Context) => {
-    await ctx.replyWithSticker(
-      "CAACAgIAAxkBAAIBAAFjqTysdE1UeXHZDx890bLJLvkYZwACfiYAApHqOEkw0BLqVzMH1iwE",
-    );
-
-    await ctx.reply(`Какие планы на 2023 год?`, {
+    await ctx.reply(dict.pointer22.q, {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
         .oneTime()
-        .text("Работать еще усерднее 😁")
+        .text(dict.pointer22.a1)
         .row()
-        .text("Отпуск! 🧳"),
+        .text(dict.pointer22.a2),
     });
   },
 
   // Pointer 2, 2, 1 (Done!)
-  "Работать еще усерднее 😁": async (ctx: Context) => {
+  [dict.pointer22.a1]: async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAP9Y6k8Ylk9B7WzLtwkddaWV2Ea6AEAAigrAALq-zlJfEC4cSJ_BXIsBA",
     );
@@ -278,7 +274,7 @@ const hook: Hook = {
   },
 
   // Pointer 2, 2, 1 (Done!)
-  "Отпуск! 🧳": async (ctx: Context) => {
+  [dict.pointer22.a2]: async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAIBCWOpPPlVnDNJMS1QWWq0rWGm46HhAALcJQACcYM4ScGjYBVSpNimLAQ",
     );
@@ -294,20 +290,20 @@ const hook: Hook = {
 
   // Pointer 2, 3
   [dict.pointer2.a3]: async (ctx: Context) => {
-    await ctx.reply(`А новогоднее настроение присутсвует?`, {
+    await ctx.reply(dict.pointer23.q, {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
         .oneTime()
-        .text("Нет 🙅")
+        .text(dict.pointer23.a1)
         .row()
-        .text("Полный джингл беллс 🕺🏻")
+        .text(dict.pointer23.a2)
         .row()
-        .text("Уже на подходе 🎄"),
+        .text(dict.pointer23.a3),
     });
   },
 
   // Pointer 2, 3, 1 (Done!)
-  "Нет 🙅": async (ctx: Context) => {
+  [dict.pointer23.a1]: async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAIBDGOpPRsoB0AVWIWqtV2h_hvOCoj_AALcJQACcYM4ScGjYBVSpNimLAQ",
     );
@@ -323,7 +319,7 @@ const hook: Hook = {
   },
 
   // Pointer 2, 3, 2 (Done!)
-  "Полный джингл беллс 🕺🏻": async (ctx: Context) => {
+  [dict.pointer23.a2]: async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAOlY6k2faHV6ng2L0zkdySFKTXL6Q4AAncoAAITojhJoZ5GzRfxCQwsBA",
     );
@@ -339,7 +335,7 @@ const hook: Hook = {
   },
 
   // Pointer 2, 3, 3 (Done!)
-  "Уже на подходе 🎄": async (ctx: Context) => {
+  [dict.pointer23.a3]: async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAIBD2OpPU-HkTBknoBNMTnDIvBcO5RcAAIoKwAC6vs5SXxAuHEifwVyLAQ",
     );
