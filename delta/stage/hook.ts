@@ -82,16 +82,16 @@ const hook: Hook = {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
         .oneTime()
-        .text(`Договариваюсь с поставщиком`)
+        .text(`Договариваюсь с поставщиком 🤝`)
         .row()
-        .text(`Работаю без выходных`)
+        .text(`Работаю без выходных 😕`)
         .row()
-        .text(`Грущу и не успеваю`),
+        .text(`Грущу и не успеваю 😫`),
     });
   },
 
   // Pointer 1, 2, 1 (Done!)
-  "Договариваюсь с поставщиком": async (ctx: Context) => {
+  "Договариваюсь с поставщиком 🤝": async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAO0Y6k4fCFHCZLpNRqmb7FCSOoY3qIAAtwlAAJxgzhJwaNgFVKk2KYsBA",
     );
@@ -110,7 +110,7 @@ const hook: Hook = {
   },
 
   // Pointer 1, 2, 2 (Done!)
-  "Работаю без выходных": async (ctx: Context) => {
+  "Работаю без выходных 😕": async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAIBEmOpParLT1SX2xKye6xmfyIquS-mAAIcHwACKQNJSaTY-iJ5d7TeLAQ",
     );
@@ -127,7 +127,7 @@ const hook: Hook = {
   },
 
   // Pointer 1, 2, 3 (Done!)
-  "Грущу и не успеваю": async (ctx: Context) => {
+  "Грущу и не успеваю 😫": async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAPRY6k6UubkW2WeDugI8dypJA9FdSMAAuglAAIrIzhJ90N8_vc6pW4sBA",
     );
