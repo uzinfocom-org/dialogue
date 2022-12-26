@@ -84,6 +84,10 @@ const hook: Hook = {
 
   // Pointer 1, 2, 1
   "Договариваюсь с поставщиком": async (ctx: Context) => {
+    await ctx.replyWithSticker(
+      "CAACAgIAAxkBAAO0Y6k4fCFHCZLpNRqmb7FCSOoY3qIAAtwlAAJxgzhJwaNgFVKk2KYsBA",
+    );
+
     await ctx.reply(
       `Я вижу, что ты очень решительный и ответственный ` +
         `человек, который с умом подходит к любому заданию, ` +
@@ -99,6 +103,10 @@ const hook: Hook = {
 
   // Pointer 1, 2, 2
   "Работаю без выходных": async (ctx: Context) => {
+    await ctx.replyWithSticker(
+      "CAACAgIAAxkBAAPLY6k5ozl80X0y0FlTajLI1cWwL6cAAn4mAAKR6jhJMNAS6lczB9YsBA",
+    );
+
     await ctx.reply(
       `Я вижу...вижу, что тебе пора отдохнуть и набраться сил. ` +
         `В 2023 году тебе предстоит научиться распределять свое ` +
