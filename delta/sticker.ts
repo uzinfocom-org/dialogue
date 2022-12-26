@@ -1,4 +1,4 @@
-import { Composer, Context, Keyboard } from "../deps.ts";
+import { Composer, Context } from "../deps.ts";
 
 const composer = new Composer();
 
