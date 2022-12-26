@@ -1,3 +1,4 @@
+import * as dict from "./stage/dict.ts"
 import { Composer, Context, Keyboard } from "../deps.ts";
 
 const composer = new Composer();
@@ -9,15 +10,15 @@ export const message = (ctx: Context): string =>
 
 export const keyboard = new Keyboard()
   .oneTime()
-  .text("Да, это моя стихия")
-  .text("Нет, Айти не мое");
+  .text(dict.start.a1)
+  .text(dict.start.a2);
 
 composer.command("start", async (ctx: Context): Promise<void> => {
   await ctx.reply(message(ctx), {
     parse_mode: "HTML",
   });
 
-  await ctx.reply("Работаешь ли ты в IT сфере?", {
+  await ctx.reply(dict.start.q, {
     parse_mode: "HTML",
     reply_markup: keyboard,
   });

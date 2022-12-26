@@ -1,39 +1,40 @@
+import * as dict from "./dict.ts"
 import { Context, Keyboard } from "../../deps.ts";
 
 type Hook = { [key: string]: (ctx: Context) => Promise<void> };
 
 const retry = new Keyboard()
-  .text("Начните с самого начала");
+  .text(dict.retry);
 
 const hook: Hook = {
   // Retry Loop
-  "Начните с самого начала": async (ctx: Context) => {
-    await ctx.reply("Работаешь ли ты в IT сфере?", {
+  [dict.retry]: async (ctx: Context) => {
+    await ctx.reply(dict.start.q, {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
         .oneTime()
-        .text("Да, это моя стихия 🧑🏻‍💻")
+        .text(dict.start.a1)
         .row()
-        .text("Нет, Айти не мое 🤖"),
+        .text(dict.start.a2),
     });
   },
 
   // Pointer 1
-  "Да, это моя стихия 🧑🏻‍💻": async (ctx: Context) => {
-    await ctx.reply(`Отлично, а что напрягает в работе?`, {
+  [dict.start.a1]: async (ctx: Context) => {
+    await ctx.reply(dict.pointer1.q, {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
         .oneTime()
-        .text("Короткие дедлайны 🫠")
+        .text(dict.pointer1.a1)
         .row()
-        .text("Баги в коде ❌")
+        .text(dict.pointer1.a2)
         .row()
-        .text("Множество правок 😡"),
+        .text(dict.pointer1.a3),
     });
   },
 
-  // Pointer 1, 1
-  "Баги в коде ❌": async (ctx: Context) => {
+  // Pointer 1, 2
+  [dict.pointer1.a2]: async (ctx: Context) => {
     await ctx.reply(`Что хуже: когда ошибаешься ты или кто-то другой?`, {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
@@ -44,40 +45,8 @@ const hook: Hook = {
     });
   },
 
-  // Pointer 1, 1, 1 (Done!)
-  'Я "ты" 😔': async (ctx: Context) => {
-    await ctx.replyWithSticker(
-      "CAACAgIAAxkBAAPUY6k6oCR_l-frSb_uZIByj2vcNpcAAlAmAALMCDlJ0kZVi7UqMm4sBA",
-    );
-
-    await ctx.reply(
-      `Я вижу, что в 2023 ты справишься с тревожностью и ` +
-        `примешь, что все все мы не идеальны и имеем право ошибаться. ` +
-        `После этого работа пойдет легко и продуктивно! 🔥`,
-      {
-        reply_markup: retry,
-      },
-    );
-  },
-
-  // Pointer 1, 1, 2 (Done!)
-  "Кто-то другой 🧐": async (ctx: Context) => {
-    await ctx.replyWithSticker(
-      "CAACAgIAAxkBAAPaY6k67M6c2hFUrkvCHufjv06FsN0AAn4mAAKR6jhJMNAS6lczB9YsBA",
-    );
-
-    await ctx.reply(
-      `В 2023 тебя ждет долгая работа над ошибками...коллег. Но не ` +
-        `расстраивайся, это ненадолго! После того как вы поговорите и придете ` +
-        `к компромиссу, работа пойдет гораздо легче и продуктивнее.`,
-      {
-        reply_markup: retry,
-      },
-    );
-  },
-
-  // Pointer 1, 2
-  "Короткие дедлайны 🫠": async (ctx: Context) => {
+  // Pointer 1, 1
+  [dict.pointer1.a1]: async (ctx: Context) => {
     await ctx.reply(`Понимаю, короткие сроки. А как решаешь проблему?`, {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
@@ -90,7 +59,7 @@ const hook: Hook = {
     });
   },
 
-  // Pointer 1, 2, 1 (Done!)
+  // Pointer 1, 1, 1 (Done!)
   "Договариваюсь с поставщиком 🤝": async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAO0Y6k4fCFHCZLpNRqmb7FCSOoY3qIAAtwlAAJxgzhJwaNgFVKk2KYsBA",
@@ -109,7 +78,7 @@ const hook: Hook = {
     );
   },
 
-  // Pointer 1, 2, 2 (Done!)
+  // Pointer 1, 1, 2 (Done!)
   "Работаю без выходных 😕": async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAIBEmOpParLT1SX2xKye6xmfyIquS-mAAIcHwACKQNJSaTY-iJ5d7TeLAQ",
@@ -126,7 +95,7 @@ const hook: Hook = {
     );
   },
 
-  // Pointer 1, 2, 3 (Done!)
+  // Pointer 1, 1, 3 (Done!)
   "Грущу и не успеваю 😫": async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAPRY6k6UubkW2WeDugI8dypJA9FdSMAAuglAAIrIzhJ90N8_vc6pW4sBA",
@@ -143,19 +112,51 @@ const hook: Hook = {
     );
   },
 
+  // Pointer 1, 2, 1 (Done!)
+  'Я "ты" 😔': async (ctx: Context) => {
+    await ctx.replyWithSticker(
+      "CAACAgIAAxkBAAPUY6k6oCR_l-frSb_uZIByj2vcNpcAAlAmAALMCDlJ0kZVi7UqMm4sBA",
+    );
+
+    await ctx.reply(
+      `Я вижу, что в 2023 ты справишься с тревожностью и ` +
+      `примешь, что все все мы не идеальны и имеем право ошибаться. ` +
+      `После этого работа пойдет легко и продуктивно! 🔥`,
+      {
+        reply_markup: retry,
+      },
+    );
+  },
+
+  // Pointer 1, 2, 2 (Done!)
+  "Кто-то другой 🧐": async (ctx: Context) => {
+    await ctx.replyWithSticker(
+      "CAACAgIAAxkBAAPaY6k67M6c2hFUrkvCHufjv06FsN0AAn4mAAKR6jhJMNAS6lczB9YsBA",
+    );
+
+    await ctx.reply(
+      `В 2023 тебя ждет долгая работа над ошибками...коллег. Но не ` +
+      `расстраивайся, это ненадолго! После того как вы поговорите и придете ` +
+      `к компромиссу, работа пойдет гораздо легче и продуктивнее.`,
+      {
+        reply_markup: retry,
+      },
+    );
+  },
+
   // Pointer 1, 3
-  "Множество правок 😡": async (ctx: Context) => {
+  [dict.pointer1.a3]: async (ctx: Context) => {
     await ctx.reply(`А что делаешь, когда правок слишком много?`, {
       reply_markup: new Keyboard()
         .oneTime()
-        .text("Оспариваю каждую!")
+        .text("Оспариваю каждую! 😠")
         .row()
-        .text("Вношу, что поделать"),
+        .text("Вношу, что поделать ✍️"),
     });
   },
 
   // Pointer 1, 3, 1 (Done!)
-  "Оспариваю каждую!": async (ctx: Context) => {
+  "Оспариваю каждую! 💪": async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAPdY6k7JGIZYEHKs-7Sgx4WMxsWL8wAAtwlAAJxgzhJwaNgFVKk2KYsBA",
     );
@@ -163,7 +164,7 @@ const hook: Hook = {
     await ctx.reply(
       `В 2023 тебя ждут жаркие споры и безудержные дебаты. ` +
         `Помни, что от критики и комментариев никто не защищен. ` +
-        `Относитесь с позитивом к подобным неурядицам и работать станет гораздо приятнее`,
+        `Относитесь с позитивом к подобным неурядицам и работать станет гораздо приятнее 😇`,
       {
         reply_markup: retry,
       },
@@ -171,7 +172,7 @@ const hook: Hook = {
   },
 
   // Pointer 1, 3, 2 (Done!)
-  "Вношу, что поделать": async (ctx: Context) => {
+  "Вношу, что поделать ✍️": async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAPgY6k7ZEVmRHKLLixFu9jgLDrzdJsAAiAoAAKYgTlJsR4nEWjPRXEsBA",
     );
@@ -180,7 +181,7 @@ const hook: Hook = {
       `Твоему самоконтролю можно позавидовать! В новом году ` +
         `тебя также ждет большое количество правок, но и хорошего ` +
         `не мало - ты освоишь новый навык и научишься смотреть на ` +
-        `ситуации с разных сторон.`,
+        `ситуации с разных сторон. 🫵🏻🦾`,
       {
         reply_markup: retry,
       },
@@ -188,21 +189,21 @@ const hook: Hook = {
   },
 
   // Pointer 2
-  "Нет, Айти не мое 🤖": async (ctx: Context) => {
-    await ctx.reply(`Как в целом прошел рабочий год?`, {
+  [dict.start.a2]: async (ctx: Context) => {
+    await ctx.reply(dict.pointer2.q, {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
         .oneTime()
-        .text("Трудно, но интересно 😛")
+        .text(dict.pointer2.a1)
         .row()
-        .text("В целом неплохо 🙂")
+        .text(dict.pointer2.a2)
         .row()
-        .text("Когда отпуск?? 🥲"),
+        .text(dict.pointer2.a3),
     });
   },
 
   // Pointer 2, 1
-  "Трудно, но интересно 😛": async (ctx: Context) => {
+  [dict.pointer2.a1]: async (ctx: Context) => {
     await ctx.reply(`Чего ждешь от 2023 года?`, {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
@@ -238,7 +239,7 @@ const hook: Hook = {
     await ctx.reply(
       `В 2023 году тебя ждут интересные проекты и много работы, однако ` +
         `ты не будешь забывать отдыхать и заботиться о себе, что плодотворно ` +
-        `скажется на реализации твоего потенциала.`,
+        `скажется на реализации твоего потенциала. `,
       {
         reply_markup: retry,
       },
@@ -246,7 +247,7 @@ const hook: Hook = {
   },
 
   // Pointer 2, 2
-  "В целом неплохо 🙂": async (ctx: Context) => {
+  [dict.pointer2.a2]: async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAIBAAFjqTysdE1UeXHZDx890bLJLvkYZwACfiYAApHqOEkw0BLqVzMH1iwE",
     );
@@ -255,21 +256,21 @@ const hook: Hook = {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
         .oneTime()
-        .text("Работать еще усерднее")
+        .text("Работать еще усерднее 😁")
         .row()
-        .text("Отпуск!"),
+        .text("Отпуск! 🧳"),
     });
   },
 
   // Pointer 2, 2, 1 (Done!)
-  "Работать еще усерднее": async (ctx: Context) => {
+  "Работать еще усерднее 😁": async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAP9Y6k8Ylk9B7WzLtwkddaWV2Ea6AEAAigrAALq-zlJfEC4cSJ_BXIsBA",
     );
 
     await ctx.reply(
       `В 2023 году твой потенциал будет реализован на максимум! Ты покоришь ` +
-        `новые вершины, откроешь для себя много нового и не раз удивишь окружающих.`,
+        `новые вершины, откроешь для себя много нового и не раз удивишь окружающих. 🗻`,
       {
         reply_markup: retry,
       },
@@ -277,14 +278,14 @@ const hook: Hook = {
   },
 
   // Pointer 2, 2, 1 (Done!)
-  "Отпуск!": async (ctx: Context) => {
+  "Отпуск! 🧳": async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAIBCWOpPPlVnDNJMS1QWWq0rWGm46HhAALcJQACcYM4ScGjYBVSpNimLAQ",
     );
 
     await ctx.reply(
       `2023 год будет довольно продуктивным и полным новых впечатлений и возможностей. ` +
-        `Ты сумеешь набраться сил и будешь полон энтузиазма заняться новыми проектами.`,
+        `Ты сумеешь набраться сил и будешь полон энтузиазма заняться новыми проектами. 🙌🏻`,
       {
         reply_markup: retry,
       },
@@ -292,21 +293,21 @@ const hook: Hook = {
   },
 
   // Pointer 2, 3
-  "Когда отпуск?? 🥲": async (ctx: Context) => {
+  [dict.pointer2.a3]: async (ctx: Context) => {
     await ctx.reply(`А новогоднее настроение присутсвует?`, {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
         .oneTime()
-        .text("Нет")
+        .text("Нет 🙅")
         .row()
-        .text("Полный джингл беллс")
+        .text("Полный джингл беллс 🕺🏻")
         .row()
-        .text("Уже на подходе"),
+        .text("Уже на подходе 🎄"),
     });
   },
 
   // Pointer 2, 3, 1 (Done!)
-  "Нет": async (ctx: Context) => {
+  "Нет 🙅": async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAIBDGOpPRsoB0AVWIWqtV2h_hvOCoj_AALcJQACcYM4ScGjYBVSpNimLAQ",
     );
@@ -314,7 +315,7 @@ const hook: Hook = {
     await ctx.reply(
       `Твоя усталость и выгорание пройдут, ты отдохнешь и сможешь взяться за ` +
         `интересные проекты с новыми силами. Не забывай про заботу о своем ментальном ` +
-        `и физическом здоровье`,
+        `и физическом здоровье 😮‍💨`,
       {
         reply_markup: retry,
       },
@@ -322,7 +323,7 @@ const hook: Hook = {
   },
 
   // Pointer 2, 3, 2 (Done!)
-  "Полный джингл беллс": async (ctx: Context) => {
+  "Полный джингл беллс 🕺🏻": async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAOlY6k2faHV6ng2L0zkdySFKTXL6Q4AAncoAAITojhJoZ5GzRfxCQwsBA",
     );
@@ -330,7 +331,7 @@ const hook: Hook = {
     await ctx.reply(
       `Отличное настроение и позитивный настрой помогут тебе войти в 2023 с новыми ` +
         `силами и рабочий год будет захватывающий и интересный. Ты будешь сиять ярче, чем ` +
-        `звезда на новогодней елке.`,
+        `звезда на новогодней елке. 🌟`,
       {
         reply_markup: retry,
       },
@@ -338,7 +339,7 @@ const hook: Hook = {
   },
 
   // Pointer 2, 3, 3 (Done!)
-  "Уже на подходе": async (ctx: Context) => {
+  "Уже на подходе 🎄": async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAIBD2OpPU-HkTBknoBNMTnDIvBcO5RcAAIoKwAC6vs5SXxAuHEifwVyLAQ",
     );
@@ -346,7 +347,7 @@ const hook: Hook = {
     await ctx.reply(
       `2023 год обещает быть заманчивым и продуктивным, вы сможете отдохнуть и закончить ` +
         `дела, до которых весь год не доходили руки. Заряжайтесь позитивом уже сейчас, 23 - ` +
-        `ваш год.`,
+        `ваш год. ⚡️`,
       {
         reply_markup: retry,
       },
