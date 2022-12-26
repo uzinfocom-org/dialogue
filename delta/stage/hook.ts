@@ -44,8 +44,12 @@ const hook: Hook = {
     });
   },
 
-  // Pointer 1, 1, 1
+  // Pointer 1, 1, 1 (Done!)
   'Я "ты"': async (ctx: Context) => {
+    await ctx.replyWithSticker(
+      "CAACAgIAAxkBAAPUY6k6oCR_l-frSb_uZIByj2vcNpcAAlAmAALMCDlJ0kZVi7UqMm4sBA"
+    )
+
     await ctx.reply(
       `Я вижу, что в 2023 ты справишься с тревожностью и ` +
         `примешь, что все все мы не идеальны и имеем право ошибаться. ` +
@@ -56,8 +60,12 @@ const hook: Hook = {
     );
   },
 
-  // Pointer 1, 1, 2
+  // Pointer 1, 1, 2 (Done!)
   "Кто-то другой": async (ctx: Context) => {
+    await ctx.replyWithSticker(
+      "CAACAgIAAxkBAAPaY6k67M6c2hFUrkvCHufjv06FsN0AAn4mAAKR6jhJMNAS6lczB9YsBA"
+    )
+
     await ctx.reply(
       `В 2023 тебя ждет долгая работа над ошибками...коллег. Но не ` +
         `расстраивайся, это ненадолго! После того как вы поговорите и придете ` +
@@ -82,7 +90,7 @@ const hook: Hook = {
     });
   },
 
-  // Pointer 1, 2, 1
+  // Pointer 1, 2, 1 (Done!)
   "Договариваюсь с поставщиком": async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAO0Y6k4fCFHCZLpNRqmb7FCSOoY3qIAAtwlAAJxgzhJwaNgFVKk2KYsBA",
@@ -101,7 +109,7 @@ const hook: Hook = {
     );
   },
 
-  // Pointer 1, 2, 2
+  // Pointer 1, 2, 2 (Done!)
   "Работаю без выходных": async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAPLY6k5ozl80X0y0FlTajLI1cWwL6cAAn4mAAKR6jhJMNAS6lczB9YsBA",
@@ -118,8 +126,12 @@ const hook: Hook = {
     );
   },
 
-  // Pointer 1, 2, 3
+  // Pointer 1, 2, 3 (Done!)
   "Грущу и не успеваю": async (ctx: Context) => {
+    await ctx.replyWithSticker(
+      "CAACAgIAAxkBAAPRY6k6UubkW2WeDugI8dypJA9FdSMAAuglAAIrIzhJ90N8_vc6pW4sBA",
+    );
+
     await ctx.reply(
       `В 2023 тебя ждут большие успехи на работе. ` +
         `Все заметят, какой ты ценный сотрудник, но... ` +
@@ -142,8 +154,12 @@ const hook: Hook = {
     });
   },
 
-  // Pointer 1, 3, 1
+  // Pointer 1, 3, 1 (Done!)
   "Оспариваю каждую!": async (ctx: Context) => {
+    await ctx.replyWithSticker(
+      "CAACAgIAAxkBAAPdY6k7JGIZYEHKs-7Sgx4WMxsWL8wAAtwlAAJxgzhJwaNgFVKk2KYsBA"
+    )
+
     await ctx.reply(
       `В 2023 тебя ждут жаркие споры и безудержные дебаты. ` +
         `Помни, что от критики и комментариев никто не защищен. ` +
