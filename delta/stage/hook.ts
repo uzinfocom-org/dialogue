@@ -271,6 +271,10 @@ const hook: Hook = {
 
   // Pointer 2, 3, 2
   "Полный джингл беллс": async (ctx: Context) => {
+    await ctx.replyWithSticker(
+      "CAACAgIAAxkBAAOlY6k2faHV6ng2L0zkdySFKTXL6Q4AAncoAAITojhJoZ5GzRfxCQwsBA",
+    );
+
     await ctx.reply(
       `Отличное настроение и позитивный настрой помогут тебе войти в 2023 с новыми ` +
         `силами и рабочий год будет захватывающий и интересный. Ты будешь сиять ярче, чем ` +
