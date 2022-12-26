@@ -47,8 +47,8 @@ const hook: Hook = {
   // Pointer 1, 1, 1 (Done!)
   'Я "ты"': async (ctx: Context) => {
     await ctx.replyWithSticker(
-      "CAACAgIAAxkBAAPUY6k6oCR_l-frSb_uZIByj2vcNpcAAlAmAALMCDlJ0kZVi7UqMm4sBA"
-    )
+      "CAACAgIAAxkBAAPUY6k6oCR_l-frSb_uZIByj2vcNpcAAlAmAALMCDlJ0kZVi7UqMm4sBA",
+    );
 
     await ctx.reply(
       `Я вижу, что в 2023 ты справишься с тревожностью и ` +
@@ -63,8 +63,8 @@ const hook: Hook = {
   // Pointer 1, 1, 2 (Done!)
   "Кто-то другой": async (ctx: Context) => {
     await ctx.replyWithSticker(
-      "CAACAgIAAxkBAAPaY6k67M6c2hFUrkvCHufjv06FsN0AAn4mAAKR6jhJMNAS6lczB9YsBA"
-    )
+      "CAACAgIAAxkBAAPaY6k67M6c2hFUrkvCHufjv06FsN0AAn4mAAKR6jhJMNAS6lczB9YsBA",
+    );
 
     await ctx.reply(
       `В 2023 тебя ждет долгая работа над ошибками...коллег. Но не ` +
@@ -112,7 +112,7 @@ const hook: Hook = {
   // Pointer 1, 2, 2 (Done!)
   "Работаю без выходных": async (ctx: Context) => {
     await ctx.replyWithSticker(
-      "CAACAgIAAxkBAAPLY6k5ozl80X0y0FlTajLI1cWwL6cAAn4mAAKR6jhJMNAS6lczB9YsBA",
+      "CAACAgIAAxkBAAIBEmOpParLT1SX2xKye6xmfyIquS-mAAIcHwACKQNJSaTY-iJ5d7TeLAQ",
     );
 
     await ctx.reply(
@@ -157,8 +157,8 @@ const hook: Hook = {
   // Pointer 1, 3, 1 (Done!)
   "Оспариваю каждую!": async (ctx: Context) => {
     await ctx.replyWithSticker(
-      "CAACAgIAAxkBAAPdY6k7JGIZYEHKs-7Sgx4WMxsWL8wAAtwlAAJxgzhJwaNgFVKk2KYsBA"
-    )
+      "CAACAgIAAxkBAAPdY6k7JGIZYEHKs-7Sgx4WMxsWL8wAAtwlAAJxgzhJwaNgFVKk2KYsBA",
+    );
 
     await ctx.reply(
       `В 2023 тебя ждут жаркие споры и безудержные дебаты. ` +
@@ -170,8 +170,12 @@ const hook: Hook = {
     );
   },
 
-  // Pointer 1, 3, 2
+  // Pointer 1, 3, 2 (Done!)
   "Вношу, что поделать": async (ctx: Context) => {
+    await ctx.replyWithSticker(
+      "CAACAgIAAxkBAAPgY6k7ZEVmRHKLLixFu9jgLDrzdJsAAiAoAAKYgTlJsR4nEWjPRXEsBA",
+    );
+
     await ctx.reply(
       `Твоему самоконтролю можно позавидовать! В новом году ` +
         `тебя также ждет большое количество правок, но и хорошего ` +
@@ -209,8 +213,12 @@ const hook: Hook = {
     });
   },
 
-  // Pointer 2, 1, 1
+  // Pointer 2, 1, 1 (Done!)
   "Больше интересных прогектов": async (ctx: Context) => {
+    await ctx.replyWithSticker(
+      "CAACAgIAAxkBAAPjY6k7wRzmniC8BcJbBos3VZ9lIjwAAlAmAALMCDlJ0kZVi7UqMm4sBA",
+    );
+
     await ctx.reply(
       `Я вижу, что в 2023 году тебя ждут инетересные проекты ` +
         `и новые открытия. Но не все так радужно, свободного времени ` +
@@ -221,8 +229,12 @@ const hook: Hook = {
     );
   },
 
-  // Pointer 2, 1, 2
+  // Pointer 2, 1, 2 (Done!)
   "Хочу отдохнуть": async (ctx: Context) => {
+    await ctx.replyWithSticker(
+      "CAACAgIAAxkBAAPmY6k8BJuuHua2zYEZ9bWuXUepg-AAAuglAAIrIzhJ90N8_vc6pW4sBA",
+    );
+
     await ctx.reply(
       `В 2023 году тебя ждут интересные проекты и много работы, однако ` +
         `ты не будешь забывать отдыхать и заботиться о себе, что плодотворно ` +
@@ -235,6 +247,10 @@ const hook: Hook = {
 
   // Pointer 2, 2
   "В целом неплохо": async (ctx) => {
+    await ctx.replyWithSticker(
+      "CAACAgIAAxkBAAIBAAFjqTysdE1UeXHZDx890bLJLvkYZwACfiYAApHqOEkw0BLqVzMH1iwE",
+    );
+
     await ctx.reply(`Какие планы на 2023 год?`, {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
@@ -245,8 +261,12 @@ const hook: Hook = {
     });
   },
 
-  // Pointer 2, 2, 1
+  // Pointer 2, 2, 1 (Done!)
   "Работать еще усерднее": async (ctx: Context) => {
+    await ctx.replyWithSticker(
+      "CAACAgIAAxkBAAP9Y6k8Ylk9B7WzLtwkddaWV2Ea6AEAAigrAALq-zlJfEC4cSJ_BXIsBA",
+    );
+
     await ctx.reply(
       `В 2023 году твой потенциал будет реализован на максимум! Ты покоришь ` +
         `новые вершины, откроешь для себя много нового и не раз удивишь окружающих.`,
@@ -256,8 +276,12 @@ const hook: Hook = {
     );
   },
 
-  // Pointer 2, 2, 1
+  // Pointer 2, 2, 1 (Done!)
   "Отпуск!": async (ctx: Context) => {
+    await ctx.replyWithSticker(
+      "CAACAgIAAxkBAAIBCWOpPPlVnDNJMS1QWWq0rWGm46HhAALcJQACcYM4ScGjYBVSpNimLAQ",
+    );
+
     await ctx.reply(
       `2023 год будет довольно продуктивным и полным новых впечатлений и возможностей. ` +
         `Ты сумеешь набраться сил и будешь полон энтузиазма заняться новыми проектами.`,
@@ -281,8 +305,12 @@ const hook: Hook = {
     });
   },
 
-  // Pointer 2, 3, 1
+  // Pointer 2, 3, 1 (Done!)
   "Нет": async (ctx: Context) => {
+    await ctx.replyWithSticker(
+      "CAACAgIAAxkBAAIBDGOpPRsoB0AVWIWqtV2h_hvOCoj_AALcJQACcYM4ScGjYBVSpNimLAQ",
+    );
+
     await ctx.reply(
       `Твоя усталость и выгорание пройдут, ты отдохнешь и сможешь взяться за ` +
         `интересные проекты с новыми силами. Не забывай про заботу о своем ментальном ` +
@@ -293,7 +321,7 @@ const hook: Hook = {
     );
   },
 
-  // Pointer 2, 3, 2
+  // Pointer 2, 3, 2 (Done!)
   "Полный джингл беллс": async (ctx: Context) => {
     await ctx.replyWithSticker(
       "CAACAgIAAxkBAAOlY6k2faHV6ng2L0zkdySFKTXL6Q4AAncoAAITojhJoZ5GzRfxCQwsBA",
@@ -309,8 +337,12 @@ const hook: Hook = {
     );
   },
 
-  // Pointer 2, 3, 3
+  // Pointer 2, 3, 3 (Done!)
   "Уже на подходе": async (ctx: Context) => {
+    await ctx.replyWithSticker(
+      "CAACAgIAAxkBAAIBD2OpPU-HkTBknoBNMTnDIvBcO5RcAAIoKwAC6vs5SXxAuHEifwVyLAQ",
+    );
+
     await ctx.reply(
       `2023 год обещает быть заманчивым и продуктивным, вы сможете отдохнуть и закончить ` +
         `дела, до которых весь год не доходили руки. Заряжайтесь позитивом уже сейчас, 23 - ` +
