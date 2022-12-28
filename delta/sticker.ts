@@ -9,10 +9,6 @@ composer.on("message:sticker", async (ctx: Context): Promise<void> => {
   await ctx.reply(message(ctx), {
     parse_mode: "HTML",
   });
-
-  await ctx.reply("Работаешь ли ты в IT сфере?", {
-    parse_mode: "HTML",
-  });
 });
 
 export default composer;
