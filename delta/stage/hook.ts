@@ -3,7 +3,7 @@ import { Context, Keyboard } from "../../deps.ts";
 
 type Hook = { [key: string]: (ctx: Context) => Promise<void> };
 
-const retry = new Keyboard()
+const retry = new Keyboard().resized()
   .text(dict.retry);
 
 const hook: Hook = {
@@ -11,7 +11,7 @@ const hook: Hook = {
   [dict.retry]: async (ctx: Context) => {
     await ctx.reply(dict.start.q, {
       parse_mode: "HTML",
-      reply_markup: new Keyboard()
+      reply_markup: new Keyboard().resized()
         .oneTime()
         .text(dict.start.a1)
         .row()
@@ -23,7 +23,7 @@ const hook: Hook = {
   [dict.start.a1]: async (ctx: Context) => {
     await ctx.reply(dict.pointer1.q, {
       parse_mode: "HTML",
-      reply_markup: new Keyboard()
+      reply_markup: new Keyboard().resized()
         .oneTime()
         .text(dict.pointer1.a1)
         .row()
@@ -37,7 +37,7 @@ const hook: Hook = {
   [dict.pointer1.a1]: async (ctx: Context) => {
     await ctx.reply(dict.pointer11.q, {
       parse_mode: "HTML",
-      reply_markup: new Keyboard()
+      reply_markup: new Keyboard().resized()
         .oneTime()
         .text(dict.pointer11.a1)
         .row()
@@ -104,7 +104,7 @@ const hook: Hook = {
   [dict.pointer1.a2]: async (ctx: Context) => {
     await ctx.reply(dict.pointer12.q, {
       parse_mode: "HTML",
-      reply_markup: new Keyboard()
+      reply_markup: new Keyboard().resized()
         .oneTime()
         .text(dict.pointer12.a1)
         .row()
@@ -147,7 +147,7 @@ const hook: Hook = {
   // Pointer 1, 3
   [dict.pointer1.a3]: async (ctx: Context) => {
     await ctx.reply(dict.pointer13.q, {
-      reply_markup: new Keyboard()
+      reply_markup: new Keyboard().resized()
         .oneTime()
         .text(dict.pointer13.a1)
         .row()
@@ -192,7 +192,7 @@ const hook: Hook = {
   [dict.start.a2]: async (ctx: Context) => {
     await ctx.reply(dict.pointer2.q, {
       parse_mode: "HTML",
-      reply_markup: new Keyboard()
+      reply_markup: new Keyboard().resized()
         .oneTime()
         .text(dict.pointer2.a1)
         .row()
@@ -206,7 +206,7 @@ const hook: Hook = {
   [dict.pointer2.a1]: async (ctx: Context) => {
     await ctx.reply(`Чего ждешь от 2023 года?`, {
       parse_mode: "HTML",
-      reply_markup: new Keyboard()
+      reply_markup: new Keyboard().resized()
         .oneTime()
         .text(dict.pointer21.a1)
         .row()
@@ -250,7 +250,7 @@ const hook: Hook = {
   [dict.pointer2.a2]: async (ctx: Context) => {
     await ctx.reply(dict.pointer22.q, {
       parse_mode: "HTML",
-      reply_markup: new Keyboard()
+      reply_markup: new Keyboard().resized()
         .oneTime()
         .text(dict.pointer22.a1)
         .row()
@@ -292,7 +292,7 @@ const hook: Hook = {
   [dict.pointer2.a3]: async (ctx: Context) => {
     await ctx.reply(dict.pointer23.q, {
       parse_mode: "HTML",
-      reply_markup: new Keyboard()
+      reply_markup: new Keyboard().resized()
         .oneTime()
         .text(dict.pointer23.a1)
         .row()

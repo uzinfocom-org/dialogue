@@ -3,7 +3,7 @@ import { Composer, Context, Keyboard } from "../deps.ts";
 
 const composer = new Composer();
 
-export const keyboard = new Keyboard()
+export const keyboard = new Keyboard().resized()
   .oneTime()
   .text(dict.start.a1)
   .text(dict.start.a2);
