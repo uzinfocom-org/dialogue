@@ -6,9 +6,9 @@ export const welcome = (ctx: Context) =>
   `Узнай, что ждет тебя в 2023 году.`;
 
 export const start = {
-  q: "Работаешь ли ты в IT сфере? 🤔",
-  a1: "Да, это моя стихия 🧑🏻‍💻",
-  a2: "Нет, Айти не мое 🤖",
+  q: "IT sohasida ishlaysizmi? 🤔",
+  a1: "Ha, bu mening soham 🧑🏻‍💻",
+  a2: "Yo'q, dasturchilik menga emas 🤖",
 };
 
 export const pointer1 = {
@@ -26,9 +26,9 @@ export const pointer11 = {
 };
 
 export const pointer12 = {
-  q: `Что хуже: когда ошибаешься ты или кто-то другой? 🤔`,
-  a1: 'Я "ты" 😔',
-  a2: "Кто-то другой 🧐",
+  q: `Nima yomonroq: siz yoki boshqalar adashgandami? 🤔`,
+  a1: 'Men "siz" 😔',
+  a2: "Boshqa kimdir 🧐",
 };
 
 export const pointer13 = {

@@ -3,21 +3,21 @@ import isPrivate from "../hooks/isPrivate.ts";
 
 const composer = new Composer();
 
-export const message = `<b>Уважаемый пользователь!</b> \n` +
+export const message = `<b>Hurmatli foydalanuvchi!</b> \n` +
   `\n` +
-  `Этот бот был написан Uzinfocom, и он существует ` +
-  `благодаря тем людям, которые приложили свои усилия. ` +
-  `Этот бот был 3-дневным дедлайновым проектом от 3 человек перечисленных ниже:`;
+  `Ushbu bot Uzinfocom tomonidan ishlab chiqilgan va ` +
+  `keltirilgan odamlar mehnati tufayli tirik. ` +
+  `Loyiha 3 kunlik dedlayn natijasida 3 kishi tomonidan yaratilgan va bular:`;
 
 export const keyboard = new InlineKeyboard()
-  .url(`UwUssimo (Программист)`, `https://t.me/uwublog`)
+  .url(`UwUssimo (Dasturchi)`, `https://t.me/uwublog`)
   .row()
-  .url(`𝐑𝐨𝐜𝐤𝐞𝐭✧ (Создатель Диалога)`, `https://t.me/stacyxan`)
+  .url(`𝐑𝐨𝐜𝐤𝐞𝐭✧ (Dialog Yozuvchi)`, `https://t.me/stacyxan`)
   .row()
-  .url(`Dilfuza (Дизайнер наклеек)`, `https://t.me/i_dilfuz`)
+  .url(`Dilfuza (Stiker Rassomi)`, `https://t.me/i_dilfuz`)
   .row()
   .url(
-    `Исходный Код (GitHub)`,
+    `Ochiq Kod (GitHub)`,
     `https://github.com/uzinfocom-org/dialogue`,
   );
 

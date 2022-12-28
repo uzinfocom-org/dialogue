@@ -12,10 +12,10 @@ composer.on("message:text", async (ctx: Context): Promise<any> => {
 
   if (!exists) {
     return await ctx.reply(
-      `Извините, я не очень понимаю. Используйте кнопки внизу, чтобы ответить 👇` +
+      `Uzr, sizni tushunmadim. Iltimos, javob berish uchun pastdagi tugmadan foydalaning 👇` +
         `\n` +
         `\n` +
-        `<a href="https://telegra.ph/CHto-delat-esli-propali-knopki-10-10">Что делать, если их не видно.</a>`,
+        `<a href="https://telegra.ph/CHto-delat-esli-propali-knopki-10-10">Nima qilish kerak agar ko'rinmasa.</a>`,
       {
         parse_mode: "HTML",
         reply_markup: keyboard,
