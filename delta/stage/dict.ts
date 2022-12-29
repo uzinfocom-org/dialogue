@@ -1,9 +1,9 @@
 import { Context } from "../../deps.ts";
 
 export const welcome = (ctx: Context) =>
-  `<b>Привет ${ctx?.from?.first_name}, с Наступающим новым годом!! 🥳</b> ` +
+  `<b>Salom ${ctx?.from?.first_name}, kirib kelayot yangi yillaring bilan!! 🥳</b> ` +
   `\n` +
-  `Узнай, что ждет тебя в 2023 году.`;
+  `2023 yilda nima bo'lishini bilib oling.`;
 
 export const start = {
   q: "IT sohasida ishlaysizmi? 🤔",
