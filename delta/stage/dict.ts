@@ -63,4 +63,4 @@ export const pointer23 = {
   a3: "Уже на подходе 🎄",
 };
 
-export const retry = "Начните с самого начала 🔁";
+export const retry = "Boshqatdan boshlash 🔁";
