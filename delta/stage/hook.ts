@@ -54,12 +54,11 @@ const hook: Hook = {
     );
 
     await ctx.reply(
-      `Я вижу, что ты очень решительный и ответственный ` +
-        `человек, который с умом подходит к любому заданию, ` +
-        `будь то работа или другие дела. В 2023 году ты займешься ` +
-        `решением грандиозных задач, будешь очень ` +
-        `продуктивным и своим примером вдохновишь немало ` +
-        `людей. ☄`,
+      `Siz juda qat\`iyatli va mas\`uliyatli ekaningizni ko\`rib turibman ` +
+        `Ish yoki boshqa masalalar bo'ladimi har qanday ishga aql bilan yondoshadigan odam, ` +
+        `2023 yilda siz buyuk muammolarni hal qilish bilan\`shug’ullanasiz siz juda band ` +
+        `bo'lasiz samarali va o'z namunangiz bilan ko'p ` +
+        `odamlarni ilhomlantirasiz ☄`,
       {
         reply_markup: retry,
       },
@@ -73,10 +72,10 @@ const hook: Hook = {
     );
 
     await ctx.reply(
-      `Я вижу...вижу, что тебе пора отдохнуть и набраться сил. ` +
-        `В 2023 году тебе предстоит научиться распределять свое ` +
-        `время, отказываться от сверхурочной работы и продлевать ` +
-        `дедлайны. Не забывай про отдых и сон! 💙`,
+      `Tushundim... Ko'ryapmanki, sizga dam olish va kuch to'plash vaqti keldi. ` +
+        `2023 yilda siz  vaqt, ortiqcha ishlashdan bosh torting va vaqtni taqsimlashni, ` +
+        `dedlaynni uzaytirish o'rganishingiz kerak bo'ladi. ` +
+        `Dam olish va uxlashni unutmang! 💙`,
       {
         reply_markup: retry,
       },
@@ -90,10 +89,9 @@ const hook: Hook = {
     );
 
     await ctx.reply(
-      `В 2023 тебя ждут большие успехи на работе. ` +
-        `Все заметят, какой ты ценный сотрудник, но... ` +
-        `только если ты научишься правильной организовывать ` +
-        `свое время ⏱`,
+      `2023 yilda ishda katta muvaffaqiyatlarga erishasiz. ` +
+        `Siz qanchalik qimmatli xodim ekanligingizni hamma payqaydi, lekin... faqat ` +
+        `vaqtingizni ⏱ to'g'ri taqsimlashni o'rgansangiz.`,
       {
         reply_markup: retry,
       },
@@ -119,9 +117,9 @@ const hook: Hook = {
     );
 
     await ctx.reply(
-      `Я вижу, что в 2023 ты справишься с тревожностью и ` +
-        `примешь, что все все мы не идеальны и имеем право ошибаться. ` +
-        `После этого работа пойдет легко и продуктивно! 🔥`,
+      `Ko'ryapmanki, 2023-yilda siz tashvish va ` +
+        `bilan kurashasiz. Biz hammamiz mukammal emasmiz va xato qilishga haqqimiz borligini qabul qilasiz. ` +
+        `Shundan keyin ish oson va samarali bo'ladi! 🔥`,
       {
         reply_markup: retry,
       },
@@ -135,9 +133,8 @@ const hook: Hook = {
     );
 
     await ctx.reply(
-      `В 2023 тебя ждет долгая работа над ошибками...коллег. Но не ` +
-        `расстраивайся, это ненадолго! После того как вы поговорите и придете ` +
-        `к компромиссу, работа пойдет гораздо легче и продуктивнее.`,
+      `2023 yilda siz ... hamkasblar xatolari ustida uzoq vaqt ishlaysiz. Lekin ` +
+        `xafa bo'lmang, bu ko’pga chozilmaydi! murosaga kelsangiz, ish ancha oson va samaraliroq bo'ladi.`,
       {
         reply_markup: retry,
       },
@@ -162,9 +159,9 @@ const hook: Hook = {
     );
 
     await ctx.reply(
-      `В 2023 тебя ждут жаркие споры и безудержные дебаты. ` +
-        `Помни, что от критики и комментариев никто не защищен. ` +
-        `Относитесь с позитивом к подобным неурядицам и работать станет гораздо приятнее 😇`,
+      `2023-yilda sizni qizg'in bahslar va cheksiz munozaralar kutmoqda. ` +
+        `Hech kim tanqid va izohlardan himoyalanmaganligini unutmang. ` +
+        `Bunday muammolarga ijobiy munosabatda bo'ling va ish yanada yoqimli bo'ladi! 😇`,
       {
         reply_markup: retry,
       },
@@ -178,10 +175,10 @@ const hook: Hook = {
     );
 
     await ctx.reply(
-      `Твоему самоконтролю можно позавидовать! В новом году ` +
-        `тебя также ждет большое количество правок, но и хорошего ` +
-        `не мало - ты освоишь новый навык и научишься смотреть на ` +
-        `ситуации с разных сторон. 🫵🏻🦾`,
+      `O'z-o'zini tuta bilishiningizga hasad qilish kerak! Yangi yilda ` +
+        `sizda juda ko'p tahrirlar bo'ladi, lekin ayni paytda yaxshiligi ` +
+        `oz emas - siz mahoratingizni oshirasiz va  vaziyatlarga turli tomonlardan ` +
+        `qarashni o'rganasiz. 🫵🏻🦾`,
       {
         reply_markup: retry,
       },
@@ -221,9 +218,8 @@ const hook: Hook = {
     );
 
     await ctx.reply(
-      `Я вижу, что в 2023 году тебя ждут интересные проекты ` +
-        `и новые открытия. Но не все так радужно, свободного времени ` +
-        `будет очень мало.. 🕑`,
+      `2023-yilda sizni qiziqarli loyihalar va yangi kashfiyotlar kutayotganini ko'ryapman.` +
+        `Ammo hammasi ham unchalik quvonchli emas, bo'sh vaqt juda kam bo'ladi... 🕑`,
       {
         reply_markup: retry,
       },
@@ -237,9 +233,9 @@ const hook: Hook = {
     );
 
     await ctx.reply(
-      `В 2023 году тебя ждут интересные проекты и много работы, однако ` +
-        `ты не будешь забывать отдыхать и заботиться о себе, что плодотворно ` +
-        `скажется на реализации твоего потенциала. ☺️`,
+      `2023-yilda sizni qiziqarli loyihalar va ko'plab ishlar kutmoqda, ammo ` +
+        `dam olishni va o'zingizga g'amxo'rlik qilishni unutmaysiz, bu juda samarali ` +
+        `potentsialingizni ro'yobga chiqarishga ta'sir qiladi. ☺️`,
       {
         reply_markup: retry,
       },
@@ -265,8 +261,9 @@ const hook: Hook = {
     );
 
     await ctx.reply(
-      `В 2023 году твой потенциал будет реализован на максимум! Ты покоришь ` +
-        `новые вершины, откроешь для себя много нового и не раз удивишь окружающих. 🗻`,
+      `2023 yilda sizning salohiyatingiz maksimal darajada yuksak cho’qqiga chiqadi! ` +
+        `Siz yangi cho'qqilar, siz juda ko'p yangi narsalarni kashf qilasiz va ` +
+        `boshqalarni bir necha marta hayratda qoldirasiz. 🗻`,
       {
         reply_markup: retry,
       },
@@ -280,8 +277,8 @@ const hook: Hook = {
     );
 
     await ctx.reply(
-      `2023 год будет довольно продуктивным и полным новых впечатлений и возможностей. ` +
-        `Ты сумеешь набраться сил и будешь полон энтузиазма заняться новыми проектами. 🙌🏻`,
+      `2023 yil juda samarali va yangi tajriba va imkoniyatlarga to'la bo'ladi. ` +
+        `Siz kuchga to’lasiz va yangi loyihalarni amalga oshirish uchun ishtiyoq bilan harakat qilasiz. 🙌🏻`,
       {
         reply_markup: retry,
       },
@@ -309,9 +306,9 @@ const hook: Hook = {
     );
 
     await ctx.reply(
-      `Твоя усталость и выгорание пройдут, ты отдохнешь и сможешь взяться за ` +
-        `интересные проекты с новыми силами. Не забывай про заботу о своем ментальном ` +
-        `и физическом здоровье 😮‍💨`,
+      `Sizning charchoqingiz va kuyib-pishishingiz o'tib ketadi, siz dam olasiz va ` +
+        `yangi kuch bilan qiziqarli loyihalarni qabul qila olasiz. ` +
+        `Ruhiy va jismoniy salomatligingiz haqida qayg’urishni unutmang 😮‍💨`,
       {
         reply_markup: retry,
       },
@@ -325,9 +322,8 @@ const hook: Hook = {
     );
 
     await ctx.reply(
-      `Отличное настроение и позитивный настрой помогут тебе войти в 2023 с новыми ` +
-        `силами и рабочий год будет захватывающий и интересный. Ты будешь сиять ярче, чем ` +
-        `звезда на новогодней елке. 🌟`,
+      `Ajoyib kayfiyat va ijobiy munosabat 2023-yilga yangi kuch bilan kirishga yordam beradi ` +
+        `va ish yili o’ziga jalb qiladigan va qiziqarli bo'ladi. Siz archa daraxti yulduzidan yorqinroq porlaysiz. 🌟`,
       {
         reply_markup: retry,
       },
@@ -341,9 +337,8 @@ const hook: Hook = {
     );
 
     await ctx.reply(
-      `2023 год обещает быть заманчивым и продуктивным, вы сможете отдохнуть и закончить ` +
-        `дела, до которых весь год не доходили руки. Заряжайтесь позитивом уже сейчас, 23 - ` +
-        `ваш год. ⚡️`,
+      `2023 yil jozibali va samarali bo'lishni va'da qilmoqda, siz dam olishingiz va yil davomida qo'lingiz tegmagan ishlarni tugatishingiz mumkin ` +
+        ` Hozir ko’tarinki kayfiyat bilan zaryadlang, 23 sizning yilingiz. ⚡️`,
       {
         reply_markup: retry,
       },

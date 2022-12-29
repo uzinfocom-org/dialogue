@@ -12,17 +12,17 @@ export const start = {
 };
 
 export const pointer1 = {
-  q: "Отлично, а что напрягает в работе? 🤔",
-  a1: "Короткие дедлайны 🫠",
-  a2: "Баги в коде ❌",
-  a3: "Множество правок 😡",
+  q: "Ajoyib, lekin ishda nima bezovta qiladi? 🤔",
+  a1: "Qisqa dedlaynlar 🫠",
+  a2: "Koddagi xatolar ❌",
+  a3: "Ko'p tuzatishlar 😡",
 };
 
 export const pointer11 = {
-  q: `Понимаю, короткие сроки. А как решаешь проблему? 🤔`,
-  a1: `Договариваюсь с поставщиком 🤝`,
-  a2: `Работаю без выходных 😕`,
-  a3: `Грущу и не успеваю 😫`,
+  q: `Tushunaman, qisqa muddatlar. Muammoni qanday hal qilasiz? 🤔`,
+  a1: `Yetkazib beruvchi bilan muzokaralar olib boraman 🤝`,
+  a2: `Dam olishsiz ishlayman 😕`,
+  a3: `Xafa bo’laman va ulgurmayman 😫`,
 };
 
 export const pointer12 = {
@@ -32,35 +32,35 @@ export const pointer12 = {
 };
 
 export const pointer13 = {
-  q: `А что делаешь, когда правок слишком много? 🤔`,
-  a1: "Оспариваю каждую! 😠",
-  a2: "Вношу, что поделать ✍️",
+  q: `Tuzatishlar juda ko'p bo'lsa, nima qilasiz? 🤔`,
+  a1: "Har biri bilan bahslashaman! 😠",
+  a2: "Nima qilish kerakligini kiritaman ✍️",
 };
 
 export const pointer2 = {
-  q: "Как в целом прошел рабочий год? 🤔",
-  a1: "Трудно, но интересно 😛",
-  a2: "В целом неплохо 🙂",
-  a3: "Когда отпуск?? 🥲",
+  q: "Umuman ish yili qanday o'tdi? 🤔",
+  a1: "Qiyin, lekin qiziqarli 😛",
+  a2: "Umuman yaxshi 🙂",
+  a3: "Ta'til qachon?? 🥲",
 };
 
 export const pointer21 = {
-  q: `Чего ждешь от 2023 года? 🤔`,
-  a1: "Больше интересных проектов 🤟🏻",
-  a2: "Хочу отдохнуть 😴",
+  q: `2023-yildan nimani kutyapsiz? 🤔`,
+  a1: "Ko’plab qiziqarli loyihalar 🤟🏻",
+  a2: "Dam olmoqchiman 😴",
 };
 
 export const pointer22 = {
-  q: `Какие планы на 2023 год? 🤔`,
-  a1: "Работать еще усерднее 😁",
-  a2: "Отпуск! 🧳",
+  q: `2023-yil uchun qanday rejalaringiz bor? 🤔`,
+  a1: "Yanada zo’r berib ishlash 😁",
+  a2: "Ta'til! 🧳",
 };
 
 export const pointer23 = {
-  q: `А новогоднее настроение присутствует? 🤔`,
-  a1: "Нет 🙅",
-  a2: "Полный джингл беллс 🕺🏻",
-  a3: "Уже на подходе 🎄",
+  q: `Yangi yil kayfiyati bormi? 🤔`,
+  a1: "Yo'q 🙅",
+  a2: "To'liq bayram 🕺🏻",
+  a3: "Yo'lda 🎄",
 };
 
 export const retry = "Boshqatdan boshlash 🔁";
